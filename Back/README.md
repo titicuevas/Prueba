@@ -139,7 +139,7 @@ src/
 ```env
 NODE_ENV=production
 PORT=3000
-MONGODB_URI=mongodb+srv://usuario:password@cluster.mongodb.net/tareas_db
+MONGODB_URI=mongodb+srv://usuario:contraseña@cluster.mongodb.net/tareas_db
 FRONTEND_URL=https://tu-frontend.com
 ```
 
