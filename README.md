@@ -228,11 +228,6 @@ npm start
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
 ---
 
@@ -246,42 +241,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ---
 
-## 🎯 Próximas Mejoras
 
-### Backend
-- [ ] Tests unitarios con Jest
-- [ ] Dockerización
-- [ ] CI/CD pipeline
-- [ ] Rate limiting avanzado
-- [ ] Logging estructurado
-
-### Frontend
-- [ ] PWA con service workers
-- [ ] Dark mode toggle
-- [ ] Internacionalización (i18n)
-- [ ] SEO optimization
-- [ ] Analytics integration
-
-### Fullstack
-- [ ] Notificaciones en tiempo real
-- [ ] Categorías de tareas
-- [ ] Fechas de vencimiento
-- [ ] Compartir tareas entre usuarios
-- [ ] Exportar/importar datos
-
----
-
-## 🆘 Soporte
-
-Si tienes alguna pregunta o problema:
-
-1. **Revisa la documentación** de cada proyecto
-2. **Verifica los logs** de la aplicación
-3. **Asegúrate** de que las dependencias estén instaladas
-4. **Revisa** la configuración de variables de entorno
-5. **Usa** la base de datos en memoria para desarrollo
-
----
 
 ⭐ **¡Proyectos listos para presentar!** ⭐
 
