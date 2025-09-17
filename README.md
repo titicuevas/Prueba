@@ -238,9 +238,11 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👨‍💻 Autor
 
-**Desarrollador Fullstack**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu LinkedIn](https://linkedin.com/in/tu-perfil)
+**Enrique Cuevas García - Desarrollador Fullstack**
+- 🌐 **Portfolio**: [prismatic-clafoutis-696b17.netlify.app](https://prismatic-clafoutis-696b17.netlify.app/)
+- 💻 **GitHub**: [@titicuevas](https://github.com/titicuevas)
+- 💼 **LinkedIn**: [enriquecuegar](https://www.linkedin.com/in/enriquecuegar/)
+- 📧 **Email**: enriquecuegarcia@gmail.com
 
 ---
 
