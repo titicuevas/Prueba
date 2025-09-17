@@ -1,0 +1,124 @@
+/* SOLUCIÓN AGRESIVA PARA EL BOUNCE */
+html, body {
+  /* Eliminar completamente el bounce */
+  overscroll-behavior: none !important;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+  
+  /* Scroll suave */
+  scroll-behavior: smooth;
+  
+  /* Prevenir el bounce en iOS */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Altura fija para prevenir problemas */
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  /* Prevenir el overscroll bounce */
+  overscroll-behavior: none !important;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+  
+  /* Mejorar el scroll en móviles */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Prevenir el bounce en móviles */
+  position: relative;
+  overflow-x: hidden;
+  
+  /* Altura fija */
+  height: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Optimización del scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Prevenir el bounce */
+  overscroll-behavior: none !important;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+}
+
+main {
+  margin-top: 80px; /* Space for fixed navigation */
+  padding-bottom: 0;
+  /* Evitar saltos en el scroll */
+  scroll-snap-type: none;
+  /* Prevenir el bounce */
+  overscroll-behavior: none !important;
+}
+
+/* Global animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Optimizaciones adicionales para móviles */
+@media (max-width: 768px) {
+  main {
+    margin-top: 70px;
+  }
+  
+  /* Mejorar el scroll en móviles */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+  }
+  
+  /* Prevenir el bounce en iOS */
+  .app {
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+/* SOLUCIÓN AGRESIVA PARA TODOS LOS ELEMENTOS */
+* {
+  /* Prevenir el bounce en TODOS los elementos */
+  overscroll-behavior: none !important;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+}
+
+/* Optimizaciones para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  /* Dispositivos táctiles */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none !important;
+    overscroll-behavior-y: none !important;
+    overscroll-behavior-x: none !important;
+  }
+  
+  /* Prevenir zoom accidental */
+  * {
+    touch-action: manipulation;
+    overscroll-behavior: none !important;
+    overscroll-behavior-y: none !important;
+    overscroll-behavior-x: none !important;
+  }
+}
+
+/* Prevenir el bounce específicamente en secciones */
+.hero, .contact, .interactive-list, .footer {
+  overscroll-behavior: none !important;
+  overscroll-behavior-y: none !important;
+  overscroll-behavior-x: none !important;
+}

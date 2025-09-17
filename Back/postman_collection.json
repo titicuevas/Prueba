@@ -1,0 +1,192 @@
+{
+  "info": {
+    "name": "API de Tareas - Backend",
+    "description": "Colección de pruebas para la API de gestión de tareas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Obtener todas las tareas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "description": "Número de página"
+            },
+            {
+              "key": "limit",
+              "value": "10",
+              "description": "Elementos por página"
+            },
+            {
+              "key": "hecha",
+              "value": "",
+              "description": "Filtrar por estado (true/false)",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "",
+              "description": "Buscar en título y descripción",
+              "disabled": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener tarea por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks/{{task_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "{{task_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Crear nueva tarea",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Completar proyecto\",\n  \"descripcion\": \"Finalizar la implementación del backend de la API de tareas\",\n  \"hecha\": false\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tasks",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"]
+        }
+      }
+    },
+    {
+      "name": "Actualizar tarea",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Proyecto completado\",\n  \"descripcion\": \"Backend de la API de tareas finalizado exitosamente\",\n  \"hecha\": true\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tasks/{{task_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "{{task_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Cambiar estado de tarea",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks/{{task_id}}/toggle",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "{{task_id}}", "toggle"]
+        }
+      }
+    },
+    {
+      "name": "Eliminar tarea",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks/{{task_id}}",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks", "{{task_id}}"]
+        }
+      }
+    },
+    {
+      "name": "Buscar tareas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks?search=proyecto",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            {
+              "key": "search",
+              "value": "proyecto",
+              "description": "Buscar tareas que contengan 'proyecto'"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filtrar tareas completadas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks?hecha=true",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            {
+              "key": "hecha",
+              "value": "true",
+              "description": "Solo tareas completadas"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filtrar tareas pendientes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/tasks?hecha=false",
+          "host": ["{{base_url}}"],
+          "path": ["api", "tasks"],
+          "query": [
+            {
+              "key": "hecha",
+              "value": "false",
+              "description": "Solo tareas pendientes"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "description": "URL base de la API"
+    },
+    {
+      "key": "task_id",
+      "value": "",
+      "description": "ID de la tarea (se llena automáticamente al crear una tarea)"
+    }
+  ]
+}

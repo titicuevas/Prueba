@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Mi primera landing interactiva</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // PREVENIR EL BOUNCE INMEDIATAMENTE
+      (function() {
+        // Aplicar estilos inmediatamente
+        document.documentElement.style.overscrollBehavior = 'none';
+        document.documentElement.style.overscrollBehaviorY = 'none';
+        document.documentElement.style.overscrollBehaviorX = 'none';
+        
+        document.body.style.overscrollBehavior = 'none';
+        document.body.style.overscrollBehaviorY = 'none';
+        document.body.style.overscrollBehaviorX = 'none';
+        
+        // Prevenir el bounce en iOS
+        document.body.style.webkitOverflowScrolling = 'touch';
+        
+        // Prevenir el overscroll inmediatamente
+        document.addEventListener('touchmove', function(e) {
+          if (e.target === document.body || e.target === document.documentElement) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+        
+        // Prevenir el bounce en el scroll
+        document.addEventListener('wheel', function(e) {
+          const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+          
+          if (scrollTop === 0 && e.deltaY < 0) {
+            e.preventDefault();
+          }
+          
+          if (scrollTop + clientHeight >= scrollHeight && e.deltaY > 0) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+      })();
+    </script>
+  </body>
+</html>
