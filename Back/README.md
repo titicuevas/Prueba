@@ -16,7 +16,7 @@ Una API REST completa para la gestión de tareas construida con Node.js, Express
 
 - Node.js (v14 o superior)
 - MongoDB (local o en la nube)
-- npm o yarn
+- npm
 
 ## 🛠️ Instalación
 
@@ -90,8 +90,8 @@ Una vez que la aplicación esté corriendo, puedes acceder a la documentación i
   "titulo": "Completar proyecto",
   "descripcion": "Finalizar la implementación del backend",
   "hecha": false,
-  "createdAt": "2024-01-15T10:30:00.000Z",
-  "updatedAt": "2024-01-15T10:30:00.000Z"
+  "createdAt": "2025-01-15T10:30:00.000Z",
+  "updatedAt": "2025-01-15T10:30:00.000Z"
 }
 ```
 
@@ -176,25 +176,3 @@ npm run test:coverage
 3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 🆘 Soporte
-
-Si tienes alguna pregunta o problema, por favor:
-1. Revisa la documentación de Swagger
-2. Verifica los logs de la aplicación
-3. Asegúrate de que MongoDB esté corriendo
-4. Revisa la configuración de variables de entorno
-
-## 🎯 Próximas mejoras
-
-- [ ] Autenticación y autorización
-- [ ] Categorías de tareas
-- [ ] Fechas de vencimiento
-- [ ] Notificaciones
-- [ ] Tests unitarios completos
-- [ ] Dockerización
-- [ ] CI/CD pipeline

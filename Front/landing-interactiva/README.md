@@ -202,15 +202,6 @@ import { motion } from 'framer-motion'
 - **Accesibilidad** con focus states
 - **Performance optimizada**
 
-## 📈 Próximas Mejoras
-
-- [ ] **Tests unitarios** con Jest/React Testing Library
-- [ ] **PWA** con service workers
-- [ ] **Dark mode** toggle
-- [ ] **Internacionalización** (i18n)
-- [ ] **SEO optimización**
-- [ ] **Analytics** integration
-
 ## 🤝 Contribución
 
 1. Fork el proyecto
@@ -219,15 +210,13 @@ import { motion } from 'framer-motion'
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
-
 ## 👨‍💻 Autor
 
-**Desarrollador Frontend**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu LinkedIn](https://linkedin.com/in/tu-perfil)
+**Enrique Cuevas García - Desarrollador Frontend**
+- 🌐 **Portfolio**: [prismatic-clafoutis-696b17.netlify.app](https://prismatic-clafoutis-696b17.netlify.app/)
+- 💻 **GitHub**: [@titicuevas](https://github.com/titicuevas)
+- 💼 **LinkedIn**: [enriquecuegar](https://www.linkedin.com/in/enriquecuegar/)
+- 📧 **Email**: enriquecuegarcia@gmail.com
 
 ---
 
